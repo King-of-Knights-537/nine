@@ -171,8 +171,8 @@ gsap.fromTo('#eighth img.right-image', {
     x: 0, autoAlpha: 1, delay: .75,
     duration: 1, ease: "bounce.out",
     scrollTrigger:{
-        trigger: 'section#eighth h2:nth-child(1)',
-        start: 'bottom'
+        trigger: 'section#eighth img.right-image',
+        start: 'top'
     }
 });
 
@@ -182,8 +182,8 @@ gsap.fromTo('#eighth img.left-image', {
     x: 0, autoAlpha: 1, delay: .75,
     duration: 1, ease: "bounce.out",
     scrollTrigger:{
-        trigger: 'section#eighth',
-        start: 'bottom 30%'
+        trigger: '#eighth img.left-image',
+        start: 'center'
     }
 });
 

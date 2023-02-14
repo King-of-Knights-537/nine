@@ -199,12 +199,6 @@ mark.animate.animated {
 .active > div:first-child + div + div + div { display:block; }
 }
 
-@media only screen and (max-width: 400px){
-  .owl-carousel .owl-stage-outer {
-    height: 390px !important;
-  }
-}
-
 @media (max-width: 600px){
 
   .controls{
@@ -244,7 +238,7 @@ mark.animate.animated {
 
   .owl-carousel .owl-item img {
     display: block;
-    width: 70% !important;
+    width: 50% !important;
     margin: auto;
   }
   .glyphicon-chevron-style {
@@ -252,9 +246,9 @@ mark.animate.animated {
     height: 48px !important;
     font-size: 18px;
   }
-  #third .owl-carousel .owl-nav button.owl-next, 
-  #third .owl-carousel .owl-nav button.owl-prev {
-    width: 48px; height: 48px;
+  .owl-carousel .owl-nav button.owl-next, 
+  .owl-carousel .owl-nav button.owl-prev {
+    width: 40px; height: 40px;
   }
   .owl-nav .owl-prev {
     position: absolute;
@@ -271,6 +265,9 @@ mark.animate.animated {
     opacity: 1;
     font-size: 18px !important;
     z-index: 1;
+  }
+  .carousel-inner{
+    height: 450px;
   }
 
 }

@@ -14,7 +14,7 @@ body {
 h1, h2, h3, p, a, button{
     font-weight: 500; 
 }
-h1, h2{
+h2{
     color: #9450c8 !important;
 }
 h2{
@@ -95,14 +95,14 @@ header .container-fluid{
     max-width: 1400px;
 }
 header .navbar-expand-lg .navbar-nav {
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
 }
 header .navbar-brand{
     height: inherit;
 }
 header .navbar img.logo{
-    width: 207px;
+    width: 70px;
 }
 header .navbar a.nav-link{
     font-size: 20px; font-weight: 600;
@@ -132,7 +132,7 @@ header .navbar-toggler:focus {
 }
 header .navbar-toggler .navbar-toggler-icon {
     width: 30px; height: 3px;
-    background: #00a94f;
+    background: #9450c8;
     border-radius: 5px; position: absolute;
     transition: all .5s ease-in-out;
     /*Inside-Alignment*/
@@ -141,8 +141,8 @@ header .navbar-toggler .navbar-toggler-icon {
 }
 header .navbar-toggler .navbar-toggler-icon::before,
 header .navbar-toggler .navbar-toggler-icon::after{
-    content: ''; position: absolute; height: 2px; 
-    background: #00a94f; border-radius: 5px;
+    content: ''; position: absolute; height: 3px; 
+    background: #9450c8; border-radius: 5px;
     transition: all .5s ease-in-out;
     transition-delay: .1s;
 }
@@ -318,7 +318,7 @@ div.logo img{
 div.logo article p{
     padding: .75em .5em;
     text-align: left; 
-    font-size: 25px !important;
+    font-size: 25px;
 }
 p.article{
     width: 75%; margin: auto;
@@ -542,6 +542,10 @@ h3.faq{
 p.faq{
     margin-left: .5em;
     font-size: 20px;
+}
+ul.faq{
+    font-size: 18px;
+    margin-left: .65em;
 }
 
 footer#final{
@@ -889,11 +893,7 @@ footer .info p{
     header .container-fluid {
         width: 95%;
     }
-    header .navbar img.logo {
-        width: 150px;
-    }
     header .navbar-collapse {
-        flex-basis: 71% !important;
         padding-left: 0; padding-right: 0;
     }
     header .navbar-expand-lg .navbar-nav .nav-link {
@@ -901,20 +901,27 @@ footer .info p{
         padding-left: 0;
     }
     header .navbar a.nav-link {
-        font-size: 18px;
+        font-size: 15px;
         /* letter-spacing: 1px; */
         text-decoration: none;
         position: relative;
         top: 3px;
     }
+    .navbar-collapse {
+        flex-basis: 60% !important;
+    }
 
 }
 
-@media only screen and (min-width: 765px) and (max-width: 1050px){
+@media only screen and (min-width: 765px) and (max-width: 1180px){
 
+    #opening .jumbotron{
+        height: 600px;
+    }
     #opening .jumbotron .content {
-        margin-left: 1em; 
+        margin-left: 3em; 
         margin-top: 0em;
+        width: 70% !important;
     }
     h1.top-topic {
         font-size: 45px;
@@ -922,9 +929,34 @@ footer .info p{
         letter-spacing: 1px;
     }
     p.sub-title {
-        font-size: 30px;
-        line-height: 40px;
+        line-height: 30px;
         letter-spacing: 1px;
+        font-size: 22px;
+    }
+
+    .advantage img{
+        margin: auto;
+        width: 45%;
+    }
+    .advantage img.right-image{
+        margin-top: 2.5em;
+    }
+    .advantage img.left-image{
+        margin-bottom: 2.5em;
+    }
+    article.content-2 {
+        width: 80%;
+        margin: auto;
+    }
+    .faq{
+        width: 100% !important;
+    }
+    .accordion{
+        margin: auto; margin-top: -1.25em;
+        padding-top: 0 !important;
+    }
+    .accordion-button{
+        font-size: 22px;
     }
 
 }
@@ -956,12 +988,12 @@ footer .info p{
 
 @media only screen and (max-width: 765px){
 
+    p{
+        font-size: 15px;
+    }
     header .navbar{
         padding-top: 5px;
         padding-bottom: 5px;
-    }
-    header .navbar-nav{
-        flex-direction: column !important;
     }
     header .navbar img.logo {
         position: absolute;
@@ -986,7 +1018,6 @@ footer .info p{
         margin: 0 0;
         width: 100%;
         text-align: center;
-        border-bottom: 1px solid #CECECE;
     }
     #third .banner-carousel .owl-item .banner-carousel-card article {
         width: 70%;
@@ -998,41 +1029,40 @@ footer .info p{
         width: 150px;
     }
     section {
-        margin-top: -2em;
-    }
-    section#fifth{
-        margin-top: -6.5em;
+        padding: 2.5em 0;
     }
     #opening .jumbotron {
-        height: 670px;
+        height: 450px;
         display: flex;
         justify-content: center;
+        background-position: center;
+    }
+    #opening{
+        margin-bottom: 0;
     }
     #opening .jumbotron .content {
         margin-left: 0;
         margin-top: 0;
-        position: absolute;
-        top: 7em;
+        width: 85%;
     }
     h1.top-topic {
         font-weight: 500;
         font-size: 33px;
         line-height: 45px;
         letter-spacing: 0;
-        text-align: center;
         margin-bottom: .4em;
     }
     h1.top-topic .long-word-spacing {
         word-spacing: 20px;
     }
     p.sub-title {
-        font-size: 26px;
+        font-size: 18px;
         font-weight: 500;
-        line-height: 40px;
+        line-height: 23px;
         letter-spacing: .5px;
     }
     #second .content {
-        margin-top: 2em;
+        margin-top: 0;
     }
     #second .content .section-1, #second .content .section-2 {
         padding: 15px 18px;
@@ -1041,7 +1071,7 @@ footer .info p{
         font-size: 26px;
         line-height: 35px;
         letter-spacing: 0;
-        padding-top: 3.5em;
+        padding-top: 1.5em;
     }
     #second .content .section-1 h3, 
     #second .content .section-2 h3 {
@@ -1069,12 +1099,31 @@ footer .info p{
         margin-left: 0; 
     }
     div.logo {
-        width: 50px;
-        height: 50px;
         margin: 0 5px;
+        width: 100%;
     }
     div.logo img {
-        width: 38px;
+        width: 55%;
+    }
+    div.logo article{
+        text-align: center;
+    }
+    div.logo article p {
+        text-align: center;
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    p.article{
+        width: 85%; font-size: 15px;
+        margin-top: -2em;
+    }
+    button.link, button.yellow-border {
+        padding: 12px 27px;
+        margin: 0 1em;
+        width: 180px;
+        font-size: 15px;
+        margin-bottom: 2em;
     }
     #second .content .section-1 .declaration, 
     #second .content .section-2 .declaration {
@@ -1082,7 +1131,7 @@ footer .info p{
     }
     #third h2 {
         font-size: 24px;
-        padding-top: 3.5em;
+        padding-top: 1.5em;
         letter-spacing: 0;
         line-height: 35px;
     }
@@ -1099,21 +1148,31 @@ footer .info p{
         transform: none;
         width: 80px;
     }
-    #forth h2 {
+    #forth h2, #fifth h2, #sixth h2, #seventh h2, #eighth h2, #nineth h2 {
         font-size: 26px;
         letter-spacing: 0;
         line-height: 35px;
-        padding-top: 3.5em;
+        padding-top: 1.5em;
         margin-bottom: .75em;
     }
-    #fifth h2 {
-        font-size: 26px;
-        letter-spacing: 0;
-        line-height: 35px;
-        padding-top: 3.5em;
-        margin-bottom: .75em;
-        margin-top: -1em;
-        word-spacing: normal;
+    .advantage{
+        padding: 1.5em 0;
+    }
+    .accordion-button{
+        font-size: 20px;
+    }
+    .advantage img {
+        width: 70%;
+        margin: auto;
+    }
+    .advantage article{
+        margin-bottom: 2em;
+    }
+    article.content-2{
+        width: 100%; margin-top: 2em;
+    }
+    .accordion{
+        padding-top: 0 !important;
     }
     footer .appication {
         margin-top: 4em;
@@ -1265,17 +1324,17 @@ footer .info p{
 @media only screen and (min-width: 1130px) and (max-width: 1670px){
    
     #second .content .section-1, #second .content .section-2 {
-        width: 530px; height: inherit;
+         height: inherit;
         text-align: left; padding-bottom: 2em;
     }
     #second .content .section-1{
         margin-bottom: 3.5em;
     }
     #second .content .section-1 .logos .logo {
-        width: 65px; height: 65px;
+       
     }
     #second .content .section-1 .logos .logo img {
-        width: 52px;
+        width: 100%;
     }
     
 }
@@ -1310,13 +1369,10 @@ footer .info p{
     }
 }
 
-@media only screen and (min-width: 765px) and (max-width: 1030px){
+@media only screen and (min-width: 765px) and (max-width: 1600px){
 
-    footer .info .paragraphes {
-        padding-right: 0;
-        width: 70%;
-        padding-top: 1em;
-        padding-bottom: 1em;
+    div.logos{
+        text-align: center;
     }
 
 }
@@ -1331,11 +1387,10 @@ footer .info p{
 
 }
 
-@media only screen and (max-width: 1670px){
+@media only screen and (min-width: 765px){
 
-    #second .content::after,
-    #second .content .section-2::after {
-        display: none;
+    .navbar-nav {
+        flex-direction: row !important; 
     }
 
 }
@@ -1346,14 +1401,6 @@ footer .info p{
         border-radius: 100%;
         width: 55px;
         height: 55px;
-    }
-
-}
-
-@media only screen and (min-width: 401px) and (max-width: 1919px){
-    
-    img.cloud-1, img.cloud-2, img.cloud-3{
-        display: none;
     }
 
 }
